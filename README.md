@@ -7,7 +7,8 @@ This example demonstrates how to use Spring Data OpenSearch to do simple CRUD op
 This example inspired be
 the [Spring-Data-ElasticSearch-Example](https://github.com/kasramp/Spring-Data-ElasticSearch-Example/tree/master)
 
-You can find the tutorial about this example at this link: [Getting started with Spring Data OpenSearch]()
+You can find the tutorial about this example at this
+link: [Getting started with Spring Data OpenSearch](https://medium.com/@m-razavi/getting-started-with-spring-boot-data-opensearch-3acde70492a8)
 
 For this example, we created a Book controller that allows doing the following operations with OpenSearch:
 
