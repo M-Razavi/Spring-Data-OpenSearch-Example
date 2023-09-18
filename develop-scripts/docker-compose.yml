@@ -1,0 +1,21 @@
+version: '2'
+services:
+  opensearch:
+    build: .
+    container_name: marketplace_os
+    hostname: marketplace_os
+    ports:
+      - 9200:9200
+      - 9600:9600
+    environment:
+      - discovery.type=single-node
+      - "DISABLE_SECURITY_PLUGIN=true"
+      - "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m"
+  opensearch-dashboards:
+    image: opensearchproject/opensearch-dashboards:1.1.0
+    container_name: marketplace_os_dashboards
+    ports:
+      - 5601:5601
+    environment:
+      OPENSEARCH_HOSTS: '["http://marketplace-os:9200"]'
+      DISABLE_SECURITY_DASHBOARDS_PLUGIN: "true"
